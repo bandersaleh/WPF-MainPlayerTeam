@@ -1,0 +1,22 @@
+﻿<Window x:Class="WPF_MainPlayerTeam.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF_MainPlayerTeam"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Canvas Background="{DynamicResource {x:Static SystemColors.AppWorkspaceBrushKey}}">
+            <ListBox x:Name="lbPlayers" Height="240" Width="160" Canvas.Left="320" Canvas.Top="102" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lbPlayers_SelectionChanged">
+                <ListBoxItem/>
+            </ListBox>
+            <ListBox x:Name="lbTeams" Height="240" Width="160" d:ItemsSource="{d:SampleData ItemCount=2}" Canvas.Left="550" Canvas.Top="102" HorizontalAlignment="Left" VerticalAlignment="Top" SelectionChanged="lbTeams_SelectionChanged"/>
+            <Label Content="Players" Canvas.Left="342" Canvas.Top="30" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Narrow"/>
+            <Label Content="Teams" Canvas.Left="590" Canvas.Top="30" FontSize="36" HorizontalAlignment="Left" VerticalAlignment="Top" FontFamily="Arial Narrow"/>
+            <Button x:Name="btnNewPlayer" Content="New Player" Canvas.Left="350" Canvas.Top="364" Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}" Height="32" Width="100" HorizontalAlignment="Center" VerticalAlignment="Top" FontFamily="Agency FB" FontSize="24" Click="btnNewPlayer_Click"/>
+            <Button x:Name="btnNewTeam" Content="New Team" Canvas.Left="590" Canvas.Top="364" Background="{DynamicResource {x:Static SystemColors.InactiveCaptionBrushKey}}" Height="32" Width="100" HorizontalAlignment="Left" VerticalAlignment="Center" FontFamily="Agency FB" FontSize="24" Click="btnNewTeam_Click"/>
+        </Canvas>
+
+    </Grid>
+</Window>
